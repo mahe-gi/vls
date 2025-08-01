@@ -45,9 +45,80 @@ html {
   color: #1a1b1f;
 }
 #navBar.scrolled #navMenu,
-#navBar.scrolled #navMenu > p,
+#navBar.scrolled #navMenu > p > a,
 #navBar.scrolled #logo {
   color: #1a1b1f;
+}
+
+/* Hide hamburger on desktop */
+#hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+#hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #navBar {
+    padding: 0 4vw;
+  }
+
+  #navMenu {
+    position: fixed;
+    top: 75px; /* below navbar */
+    right: -100%; /* hide offscreen */
+    background-color: var(--primary-dark-blue); /* or your color */
+    height: calc(100vh - 75px);
+    width: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    color: var(--secandary-light-skyblue);
+    font-weight: 400;
+    font-size: 18px;
+    z-index: 20;
+  }
+
+  #navMenu p {
+    margin: 0;
+    cursor: pointer;
+  }
+  #navMenu p:hover {
+    color: #edededb2;
+  }
+
+  #contactBtn {
+    display: none; /* Hide contact button inside navbar; you can move it inside navMenu if needed */
+  }
+
+  /* Show hamburger */
+  #hamburger {
+    display: flex;
+  }
+
+  /* When navMenu is active */
+  #navMenu.active {
+    right: 0;
+  }
+
+  /* Change logo & hamburger colors on scroll */
+  #navBar.scrolled #hamburger .bar {
+    background-color: #1a1b1f;
+  }
 }
 
 #logo {

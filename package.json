@@ -1,0 +1,23 @@
+{
+  "name": "vls",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "npx parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahe-gi/vls.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahe-gi/vls/issues"
+  },
+  "homepage": "https://github.com/mahe-gi/vls#readme",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.15.4"
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        background: #f7f7f7;
+        color: #222;
+      }
+      .contact-container {
+        padding: 32px;
+        margin: auto;
+        max-width: 500px;
+      }
+      .contact-item {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .contact-label {
+        width: 80px;
+        font-weight: bold;
+      }
+      .contact-value a {
+        color: #2366d1;
+        text-decoration: none;
+      }
+      iframe {
+        width: 100%;
+        height: 260px;
+        border: 0;
+        border-radius: 8px;
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <div class="contact-item">
+        <div class="contact-label">Email:</div>
+        <div class="contact-value">
+          <a href="mailto:info@example.com">info@example.com</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Phone:</div>
+        <div class="contact-value">
+          <a href="tel:+1234567890">+1 234 567 890</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location:</div>
+        <div class="contact-value">123 Main Street, Cityville, Country</div>
+      </div>
+      <iframe
+        src="https://www.google.com/maps?q=123+Main+Street,Cityville,Country&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 // Navbar scroll color change
 window.addEventListener("scroll", function () {
   const navBar = document.getElementById("navBar");
+
   // Add 'scrolled' class after scrolling down 50px
   if (window.scrollY > 50) {
     navBar.classList.add("scrolled");
@@ -21,4 +22,11 @@ document.querySelectorAll(".faq-question").forEach((btn) => {
       if (other !== item) other.classList.remove("active");
     });
   });
+});
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
 });
