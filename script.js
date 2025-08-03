@@ -33,7 +33,7 @@ hamburger.addEventListener("click", () => {
 
 const callBtn = document.getElementById("bookConsuktationBtn");
 callBtn.addEventListener("click", () => {
-  window.open("https://wa.me/+919492864455?text=Hello%20World", "_blank");
+  window.open("https://wa.me/+919492864455?text=hi", "_blank");
 });
 
 const contactBtn = document.getElementById("contactBtn");
@@ -67,3 +67,22 @@ function animate() {
 }
 
 animate();
+
+const sendmsg = document.getElementById("send-form");
+sendmsg.addEventListener("click", () => {
+  senMsg();
+
+  window.open("https://wa.me/+919492864455?text=hi", "_blank");
+});
+
+function senMsg() {
+  console.log("sdf");
+  const name = document.getElementById("name-form").value.trim();
+  const phone = document.getElementById("phone-form").value.trim();
+  const message = document.getElementById("message-form").value.trim();
+  const defaultMessage = `Hello, I am ${name}.\nPhone: ${phone}\nMessage: ${message}`;
+  const whatsappNumber = "+919492864455";
+  const encodedMessage = encodeURIComponent(defaultMessage);
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+  window.open(whatsappURL, "_blank");
+}

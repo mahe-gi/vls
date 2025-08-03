@@ -65,7 +65,10 @@
     <!-- hidden words. end -->
     <!-- Header / Navigation -->
     <header id="navBar">
-      <div id="logo">Verdicta</div>
+      <div id="logo">
+        <img id="logo-img" src="./assets/images/logo1.png" alt="" />
+        <h1>Verdicta Legal Solutions</h1>
+      </div>
 
       <nav id="navMenu">
         <p><a href="#hero">Home</a></p>
@@ -108,15 +111,67 @@
             </div>
           </div>
         </div>
-        <div id="Hero-services">
-          <div id="trademark"><p>Trademark</p></div>
-          <div id="Copyrights"><p>Copyrights</p></div>
-          <div id="Patents"><p>Patents</p></div>
-          <div id="Registration"><p>Firm Registration</p></div>
-          <div id="legal"><p>Legal Compliance</p></div>
-        </div>
       </div>
-
+      <section id="marquee-sec">
+        <div id="marque">
+          <h2>
+            GST Services
+            <span> </span>
+            firm Registration
+            <span> </span>
+            Trademark
+            <span> </span>
+            Copyright
+            <span> </span>
+            patents
+            <span> </span>
+            legal-compience
+            <span> </span>
+          </h2>
+          <h2>
+            GST Services
+            <span> </span>
+            firm Registration
+            <span> </span>
+            Trademark
+            <span> </span>
+            Copyright
+            <span> </span>
+            patents
+            <span> </span>
+            legal-compience
+            <span> </span>
+          </h2>
+          <h2>
+            GST Services
+            <span> </span>
+            firm Registration
+            <span> </span>
+            Trademark
+            <span> </span>
+            Copyright
+            <span> </span>
+            patents
+            <span> </span>
+            legal-compience
+            <span> </span>
+          </h2>
+          <h2>
+            GST Services
+            <span> </span>
+            firm Registration
+            <span> </span>
+            Trademark
+            <span> </span>
+            Copyright
+            <span> </span>
+            patents
+            <span> </span>
+            legal-compience
+            <span> </span>
+          </h2>
+        </div>
+      </section>
       <!-- About Section -->
       <section class="about" id="aboutre">
         <div class="about-left">
@@ -318,31 +373,39 @@
         <div class="consult-content">
           <h2>Free Consultation</h2>
           <p class="consult-desc">
-            Let’s discuss your needs. Call us or send a message to get started.
+            Let’s discuss your needs. send a message to get started.
           </p>
           <form class="consult-form">
             <label
               ><span>Name</span
-              ><input type="text" name="name" placeholder="Jane Smith" required
+              ><input
+                id="name-form"
+                type="text"
+                name="name"
+                placeholder="Enter your Name"
+                required
             /></label>
             <label
-              ><span>Email</span
+              ><span>Phone</span
               ><input
-                type="email"
-                name="email"
-                placeholder="jane@framer.com"
+                type="text"
+                id="phone-form"
+                name="phone"
+                placeholder="999 000 0000"
+                value=""
                 required
             /></label>
             <label
               ><span>Message</span
               ><textarea
+                id="message-form"
                 name="message"
                 placeholder="Your message..."
                 required
               ></textarea>
             </label>
-            <button type="submit" class="consult-btn">
-              Call Us / Send Message
+            <button type="submit" id="send-form" class="consult-btn">
+              Send Message
             </button>
           </form>
         </div>

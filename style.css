@@ -35,11 +35,11 @@ html {
   left: 0;
   width: 40px;
   height: 40px;
-  background: white;
+  background: rgba(255, 255, 255, 0.446);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   mix-blend-mode: difference;
   z-index: 9999;
   /* animation: fadeTrail 1s infinite; */
@@ -54,6 +54,17 @@ html {
   }
 } */
 
+#logo-img {
+  height: 70px;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+#logo > h1 {
+  font-size: 22px;
+}
 #navBar {
   height: 75px;
   width: 100%;
@@ -188,7 +199,7 @@ a {
   padding: 6vw;
   height: 100vh;
   width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1601041084273-6114cad589d5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-image: url("./assets/images/bg2.avif");
   background-position: center;
   background-size: cover;
   display: flex;
@@ -245,29 +256,61 @@ a {
   color: var(--secandary-light-skyblue);
 }
 
-#Hero-services {
-  position: absolute;
-  height: 10%;
-  width: 86%;
-  bottom: 30px;
-  left: 6vw;
-  /* background-color: var(--primary-dark-blue); */
-  background-color: #213753ab;
-  z-index: 1;
+#marque {
+  height: 90%;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 1vw 0;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
-#Hero-services > div > p {
-  font-size: 1.2vw;
-  color: #ddebf9f6;
+#marque > h2 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: 400;
+  /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.759); */
+  /* color: transparent; */
+  /* font-family: premier-bold; */
+  margin-right: 16px;
+  letter-spacing: 3px;
+  animation-name: moveMarque;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
+#marque > h2 > span {
+  height: 100%;
+  border-right: 2px solid black;
+  margin: 0px 2vw;
+}
+
+@keyframes moveMarque {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+#marquee-sec {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+/* About Section CSS */
+
 #about {
   height: 100vh;
   width: 100%;
   background-color: red;
 }
-/* About Section CSS */
 .about {
   display: flex;
   justify-content: space-between;
@@ -328,6 +371,9 @@ a {
 }
 
 @media screen and (max-width: 590px) {
+  .cursor-follower {
+    display: none;
+  }
   #slug {
     width: 100%;
     height: 50%;
@@ -351,16 +397,6 @@ a {
     line-height: 25px;
   }
 
-  #Hero-services {
-    height: 12vh;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  #Hero-services > div > p {
-    font-size: 5vw;
-    color: #ddebf9f6;
-  }
-
   #bookConsuktationBtn {
     padding: 2vw 4vw;
     border-radius: 20px;
@@ -375,6 +411,48 @@ a {
   #bookConsuktationBtn:hover {
     background-color: var(--primary-dark-blue);
     color: var(--secandary-light-skyblue);
+  }
+
+  #marque {
+    height: 80%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 1vw 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.606);
+    border-top: 1px solid rgba(0, 0, 0, 0.496);
+    display: flex;
+    align-items: center;
+  }
+  #marque > h2 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 4vw;
+    font-weight: 400;
+    /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.759); */
+    /* color: transparent; */
+    /* font-family: premier-bold; */
+    margin-right: 16px;
+    letter-spacing: 3px;
+    animation-name: moveMarque;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes moveMarque {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+  }
+
+  #marquee-sec {
+    height: 90px;
+    display: flex;
+    align-items: center;
   }
 }
 
