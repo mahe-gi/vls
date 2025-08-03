@@ -41,13 +41,16 @@ contactBtn.addEventListener("click", () => {
   window.open("tel:+919492864455");
 });
 
-const follower = document.querySelector(".cursor-follower");
+const ctabtn = document.getElementById("cta");
+ctabtn.addEventListener("click", () => {
+  window.open("tel:+919492864455");
+});
 
+const follower = document.querySelector(".cursor-follower");
 let mouseX = 0;
 let mouseY = 0;
 let posX = 0;
 let posY = 0;
-
 document.addEventListener("mousemove", (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
